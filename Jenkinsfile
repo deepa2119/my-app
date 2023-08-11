@@ -4,17 +4,17 @@ pipeline {
     stages {
         stage('Clone and clean') {
             steps {
-                sh "mvn clean -f my-app"
+                sh "mvn clean"
             }
         }
         stage('test') {
             steps {
-                sh "mvn test -f my-app"
+                sh "mvn test"
             }
         }
         stage('Package') {
             steps {
-                sh "mvn package -f my-app"
+                sh "mvn package"
             }
         }
     }

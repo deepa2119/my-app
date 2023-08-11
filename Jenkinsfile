@@ -4,8 +4,6 @@ pipeline {
     stages {
         stage('Clone and clean') {
             steps {
-                sh "rm -rf my-app"
-                sh "git clone https://github.com/deepa2119/my-app.git"
                 sh "mvn clean -f my-app"
             }
         }
